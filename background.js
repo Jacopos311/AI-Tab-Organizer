@@ -9,7 +9,7 @@ const SYSTEM_PROMPT = `Sei un assistente che organizza le tab del browser.
 Analizza la lista di titoli e URL fornita e raggruppali in categorie logiche (es. Lavoro, Social, Shopping, News).
 Restituisci RIGIDAMENTE solo un oggetto JSON valido con questa struttura:
 { "Nome Categoria": [id_tab1, id_tab2] }
-Non aggiungere testo introduttivo, markdown, spiegazioni o commenti. Solo JSON puro.`;
+Non aggiungere testo introduttivo, markdown, spiegazioni o commenti. Solo JSON puro. riordina in inglese rigorosamente`;
 
 const GROUP_COLORS = ['blue', 'red', 'yellow', 'green', 'pink', 'purple', 'cyan', 'orange', 'grey'];
 
