@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tab Organizer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <header class="header">
+    <svg class="header__icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="28" height="28" rx="7" fill="#1a1d27"/>
+      <rect x="4" y="6" width="8" height="4" rx="1.5" fill="#7c5cfc"/>
+      <rect x="14" y="6" width="10" height="4" rx="1.5" fill="#2e3245"/>
+      <rect x="4" y="12" width="20" height="11" rx="2" fill="#252836"/>
+      <path d="M14 15 L14.9 17.1 L17 18 L14.9 18.9 L14 21 L13.1 18.9 L11 18 L13.1 17.1 Z" fill="#7c5cfc" opacity="0.9"/>
+    </svg>
+    <h1 class="header__title">AI Tab <span>Organizer</span></h1>
+  </header>
+
+  <hr class="divider" />
+
+  <section aria-label="Configurazione API Key">
+    <p class="section-label">Hugging Face Token</p>
+    <div class="api-row">
+      <input
+        type="text"
+        id="apiKeyInput"
+        class="api-input"
+        placeholder="hf_••••••••••••••••••••"
+        autocomplete="off"
+        spellcheck="false"
+        style="-webkit-text-security: disc;"
+        aria-label="Inserisci la tua Hugging Face API Key"
+      />
+      <button id="saveKeyBtn" class="btn btn--save" aria-label="Salva API Key">
+        Salva
+      </button>
+    </div>
+    <p class="key-status" id="keyStatus" aria-live="polite"></p>
+  </section>
+
+  <button id="organizeBtn" class="btn btn--primary" aria-label="Riorganizza le tab aperte con AI">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M9 2 L10.5 6.5 L15 8 L10.5 9.5 L9 14 L7.5 9.5 L3 8 L7.5 6.5 Z" fill="currentColor" opacity="0.9"/>
+    </svg>
+    Riorganizza Tab con AI
+  </button>
+
+  <section aria-label="Stato operazione">
+    <p class="section-label">Stato</p>
+    <div id="statusBox" class="status-box" role="status" aria-live="polite" aria-atomic="true">Pronto.</div>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
